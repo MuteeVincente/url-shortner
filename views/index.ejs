@@ -32,11 +32,13 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td class="sr-only"><a href="https://github.com/muteevincente">https://github.com/muteevincente</a></td>
-                    <td><a href="12345">12345</a></td>
-                    <td>7</td>
-                </tr>
+                <% shortUrls.forEach(shortUrl => { %>
+                    <tr>
+                      <td><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
+                      <td><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+                      <td><%= shortUrl.clicks %></td>
+                    </tr>
+                  <% }) %>
             </tbody>
         </table>
     </div>
